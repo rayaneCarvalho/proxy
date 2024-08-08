@@ -1,4 +1,4 @@
-package java;
+package org.example;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class FuncionarioProxy implements IFuncionario {
         if (instance == null) {
             instance = new FuncionarioProxy(id);
         } else {
-            instance.id = id; // Atualiza o id se a instância já existir
+            instance.id = id;
         }
         return instance;
     }
@@ -31,7 +31,7 @@ public class FuncionarioProxy implements IFuncionario {
     @Override
     public Double obterSalario(Acesso acesso) {
         if (!acesso.temPermissao()) {
-            throw new IllegalArgumentException("java.Acesso não autorizado");
+            throw new IllegalArgumentException("java.org.example.Acesso não autorizado");
         }
         if (this.funcionario == null) {
             this.funcionario = FuncionarioData.getFuncionario(this.id);

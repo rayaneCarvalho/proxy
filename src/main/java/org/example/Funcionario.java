@@ -1,4 +1,4 @@
-package java;
+package org.example;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,7 +28,7 @@ public class Funcionario implements IFuncionario {
     @Override
     public Double obterSalario(Acesso acesso) {
         if (!acesso.temPermissao()) {
-            throw new IllegalArgumentException("java.Acesso não autorizado");
+            throw new IllegalArgumentException("java.org.example.Acesso não autorizado");
         }
         return this.salario;
     }

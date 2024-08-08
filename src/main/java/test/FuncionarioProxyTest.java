@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import org.example.Acesso;
+import org.example.FuncionarioData;
+import org.example.FuncionarioProxy;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -40,7 +43,7 @@ class FuncionarioProxyTest {
             proxy.obterSalario(acessoNormal);
             fail();
         } catch (IllegalArgumentException e) {
-            assertEquals("java.Acesso não autorizado", e.getMessage());
+            assertEquals("java.org.example.Acesso não autorizado", e.getMessage());
         }
     }
 }
